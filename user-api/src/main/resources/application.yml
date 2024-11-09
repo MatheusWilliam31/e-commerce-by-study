@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: user-api
+  jpa:
+    properties:
+      hibernate:
+        default_schema: users
+  datasource:
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 5
+    url: jdbc:postgresql://localhost:5432/dev
+    username: admin
+    password: admin
+  flyway:
+    schemas: users
+server:
+  port: 8080
